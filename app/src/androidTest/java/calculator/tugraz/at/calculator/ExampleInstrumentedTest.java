@@ -62,12 +62,14 @@ public class ExampleInstrumentedTest {
         onView(withText("C")).perform(click());
         onView(withId(R.id.txt_input)).check(matches(withText("0")));
     }
-     @Test
-    public void testMinusCalculation (){
+
+    @Test
+    public void testMinusCalculation() {
         onView(withId(R.id.button9)).perform(click());
-         onView(withId(R.id.button_minus)).perform(click());
-         onView(withId(R.id.button8)).perform(click());
-         onView(withId(R.id.txt_input)).check(matches(withText("1")));
-     }
+        onView(withId(R.id.button_minus)).perform(click());
+        onView(withId(R.id.button8)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.txt_input)).check(matches(withText("1")));
+    }
 
 }
