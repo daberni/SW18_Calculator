@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/4_SWE.iml" filepath="$PROJECT_DIR$/4_SWE.iml" />
+      <module fileurl="file://D:\sw18\SW18_Calculator\4_SWE.iml" filepath="D:\sw18\SW18_Calculator\4_SWE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SW18_Calculator.iml" filepath="$PROJECT_DIR$/SW18_Calculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

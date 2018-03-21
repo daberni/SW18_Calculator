@@ -12,6 +12,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView inputText;
+    private Button clearBtn;
     private List<Button> numberButtons​ = new ArrayList<>();
 
     @Override
@@ -20,6 +21,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         inputText = findViewById(R.id.txt_input);
+        clearBtn = findViewById(R.id.button_clear);
+        clearBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputText.setText("0");
+            }
+        });
 
         for (int i = 0; i <= 9; i++) {
             int buttonId = getResources().getIdentifier("button" + i, "id", R.class.getPackage().getName());
