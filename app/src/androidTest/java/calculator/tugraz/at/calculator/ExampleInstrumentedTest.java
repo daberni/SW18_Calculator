@@ -2,7 +2,6 @@ package calculator.tugraz.at.calculator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
-import android.support.test.espresso.Espresso;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -54,5 +53,12 @@ public class ExampleInstrumentedTest {
             onView(withText(Integer.toString(i))).perform(click());
         }
         onView(withText("9876543210")).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void testClearButton() {
+        onView(withText("3")).perform(click());
+        onView(withText("C")).perform(click());
+        onView(withText(R.id.txt_input)).check(matches(withText("0")));
     }
 }
